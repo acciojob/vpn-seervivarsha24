@@ -22,10 +22,10 @@ public class User {
 
     @ManyToMany
     @JoinColumn
-    private List<ServiceProvider> serviceProviderList=new ArrayList<>();
+    private List<ServiceProvider> serviceProviderList;
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
-    private List<Connection> connectionList=new ArrayList<>();
+    private List<Connection> connectionList;
 
     @OneToOne(mappedBy = "user",cascade = CascadeType.ALL)
     private Country originalCountry;
